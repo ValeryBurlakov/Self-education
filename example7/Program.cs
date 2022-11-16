@@ -19,6 +19,32 @@ if (k >= 1 && k <= 365)
     if(dayear <=7 && dayear >=1)
     {
         Console.WriteLine("молодец, ввел правильный день недели");
+        int dayweek = (k + dayear - 1) % 7;
+        // Console.WriteLine(dayweek);
+        switch(dayweek)
+        {
+            case 1:
+            Console.WriteLine($"{k} день года это: Понедельник");
+            break;
+            case 2:
+            Console.WriteLine($"{k} день года это: Вторник");
+            break;
+            case 3:
+            Console.WriteLine($"{k} день года это: среда");
+            break;
+            case 4:
+            Console.WriteLine($"{k} день года это: Четверг");
+            break;
+            case 5:
+            Console.WriteLine($"{k} день года это: Пятница");
+            break;
+            case 6:
+            Console.WriteLine($"{k} день года это: Суббота");
+            break;
+            case 7:
+            Console.WriteLine($"{k} день года это: Воскресенье");
+            break;
+        }
     }
     else
     {
@@ -27,5 +53,5 @@ if (k >= 1 && k <= 365)
 }
 else
 {
-    Console.WriteLine("вы ввели неправильно, перезапустите программу");
+    Console.WriteLine("в году дней может быть от 1 до 365, перезапускай мудень");
 }
